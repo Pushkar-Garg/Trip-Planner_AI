@@ -8,8 +8,8 @@ function Hero() {
     <h1
     className='font-extrabold text-[60px] text-center mt-16'
     >
-    <span className='text-[#f95513]'>Discover Your Next Adventure with AI:</span> Personalized Ltineraries at Your Fingertips</h1>
-    <p className='text-xl text-gray-500 text-center'>Your personal trip planner and travel ourator, creating custom itineries tailored to your interests and budget </p>
+    <span className='text-[#113db6]'>Discover Your Next Adventure with AI:</span> Personalized Ltineraries at Your Fingertips</h1>
+    <p className='text-xl text-center'>Your personal trip planner and travel ourator, creating custom itineries tailored to your interests and budget </p>
     <Link to={'/create-trip'}>
     <Button variant="ghost"> Get started, It's free</Button>
     </Link>

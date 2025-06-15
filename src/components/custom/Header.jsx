@@ -45,16 +45,20 @@ function Header() {
     onSuccess: (codeResp) => GetUserProfile(codeResp),
     onError: (error) => console.log(error),
   });
-  useEffect(() => {
-    console.log(user);
-  }, []);
+
 
   return (
-    <div className="p-2 w-screen shadow-sm flex justify-between items-center px-4">
+    
+    <div className="p-2 w-screen shadow-sm flex justify-between items-center px-4 bg-gray-200">
       <img src="/logo.svg" className="w-45" alt="hello" />
       <div>
         {user ? (
           <div className="flex items-center gap-3">
+          <a href="/create-trip">
+              <Button variant="ghost" className="rounded-full">
+                + Create Trip
+              </Button>
+            </a>
             <a href="/my-trip">
               <Button variant="ghost" className="rounded-full">
                 My trip
@@ -62,7 +66,7 @@ function Header() {
             </a>
             <Popover>
               <PopoverTrigger>
-                <img src={"/userLogo.png"} className="h-[50px] w-[50px]" />
+                <img src={"/userLogo.png"} className="h-[50px] w-[50px] rounded-4xl" />
               </PopoverTrigger>
               <PopoverContent>
                 <h2

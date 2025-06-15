@@ -167,9 +167,15 @@ function CreateTrip() {
   }
   
   return (
-    <div className='sm:px-10 md:px-32 lg:px-56 xl:px-10 px-5 mt-10'>
+    <div style={{
+    background: 'linear-gradient(180deg, #3270c2 0%, #10a7bb22 60%)',
+    paddingTop: '50px',
+    paddingBottom: '10px',
+    minHeight: '90dvh'
+  }}>
+    <div className='sm:px-10 md:px-32 lg:px-56 xl:px-10 px-5 '>
     <h2 className='font-bold text-3xl'>Tell us your travel preferences</h2>
-    <p className='mt-3 text-gray-500 text-xl'>Just provide some basic information, and our trip planner will generate a customized itineries based on your preferences</p>
+    <p className='mt-3 text-xl'>Just provide some basic information, and our trip planner will generate a customized itineries based on your preferences</p>
     
     <div>
       <div className="w-full max-w-5xl  mx-auto mt-10 ">
@@ -181,7 +187,7 @@ function CreateTrip() {
             // onChange={e => { handleInputChange(e); handleInputChange1('location',query1) }}
             onChange={ handleInputChange}
             placeholder="Search location..."
-            className="w-full rounded-xl p-2 border border-gray-300"
+            className="w-full rounded-xl p-2 border border-black"
           />
           {suggestions.length > 0 && (
             <ul className="border mt-2 rounded-md shadow bg-white">
@@ -209,7 +215,7 @@ function CreateTrip() {
                        className={`p-4 cursor-pointer rounded-md hover:shadow-lg 
                       ${formData?.budget==item.tittle&&'shadow-lg border-black'} 
                       `}>
-                    <h2 className='text-4xl'>{item.icon}</h2>
+                    {/* <h2 className='text-4xl'>{item.icon}</h2> */}
                     <h2 className='font-bold text-lg'>{item.tittle}</h2>
                     <h2 className='text-sm text-gray-500'>{item.desc}</h2>
                   </div>
@@ -225,7 +231,7 @@ function CreateTrip() {
                        className={`p-4 cursor-pointer rounded-md hover:shadow-lg 
                       ${formData?.people==item.people&&'shadow-lg border-black'} 
                       `}>
-                    <h2 className='text-4xl'>{item.icon}</h2>
+                    {/* <h2 className='text-4xl'>{item.icon}</h2> */}
                     <h2 className='font-bold text-lg'>{item.tittle}</h2>
                     <h2 className='text-sm text-gray-500'>{item.desc}</h2>
                   </div>
@@ -255,6 +261,7 @@ function CreateTrip() {
         </div>
         
       </div>
+    </div>
     </div>
   )
 }
