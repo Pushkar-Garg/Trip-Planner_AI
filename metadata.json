@@ -1,0 +1,5 @@
+{
+  "name": "AI Trip Planner",
+  "description": "A full-stack AI-powered travel itinerary generator with user authentication and trip history.",
+  "requestFramePermissions": ["geolocation"]
+}
